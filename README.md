@@ -175,7 +175,7 @@ app.config(['$httpProvider', function ($httpProvider) {
 
 ## Challenges
 
-Work on the <a href="https://github.com/sf-wdi-34/mean-auth-lab" target="_blank">MEAN Auth Microblog</a>.
+Work on the <a href="https://github.com/sf-wdi-34/mean-auth-satellizer" target="_blank">MEAN Auth Microblog</a>.
 
 ## Resources
 
