@@ -18,7 +18,7 @@ Many apps track user data and allow users to sign up, log in, and log out. We ha
 <!-- specific/measurable goal for students to achieve -->
 *After this workshop, developers will be able to:*
 
-- In Express, implement a `User` model that securely stores passwords with `bcrypt`.
+
 - Compare and contrast Session and Web Token authentication strategies. 
 - Use the Satellizer module to implement Web Token authentication in Angular.
 
