@@ -177,8 +177,9 @@ app.config(['$httpProvider', function ($httpProvider) {
 
 Work on the <a href="https://github.com/sf-wdi-34/mean-auth-satellizer" target="_blank">MEAN Auth Microblog</a>.
 
-## Resources
+## More Resources
 
+* Are you working on a MongoDB/Express app without Angular? Or just looking for a more Rails-ish solution? A session-based version of Express auth is described in [a workshop](https://github.com/sf-wdi-34/express-simple-auth) and viewable in [an example](https://github.com/sf-wdi-34/express-auth-seed).
 * <a href="https://auth0.com/blog/2014/01/07/angularjs-authentication-with-cookies-vs-token" target="_blank">Cookies vs Tokens. Getting auth right with Angular.JS</a> [Auth0 Blog]
 * <a href="http://blog.matoski.com/articles/jwt-express-node-mongoose" target="_blank">Express4 + Mongoose + JSON Web Token Authentication</a> [matoski.com]
 * <a href="http://jwt.io" target="_blank">JSON Web Tokens</a> [jwt.io]
