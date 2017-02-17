@@ -1,13 +1,43 @@
-# <img src="https://cloud.githubusercontent.com/assets/7833470/10899314/63829980-8188-11e5-8cdd-4ded5bcb6e36.png" height="60"> Angular Auth with Satellizer
+<!--
+Creator: SF WDI Team (Cameron, Eric)
+Last Edited by: Brianna
+Location: SF
+-->
 
-| Objectives |
-| :--- |
-| Compare and contrast Cookie-Session and Web Token authentication strategies |
-| Use the Satellizer module to implement Web Token authentication in Angular |
+![](https://ga-dash.s3.amazonaws.com/production/assets/logo-9f88ae6c9c3871690e33280fcf557f33.png)
+
+# Angular Auth with Satellizer
+
+### Why is this important?
+<!-- framing the "why" in big-picture/real world examples -->
+*This workshop is important because:*
+
+Many apps track user data and allow users to sign up, log in, and log out. We have seen how Rails uses cookie- and session-based authentication.  Today we'll look at a strategy to implement these features.
+
+### What are the objectives?
+<!-- specific/measurable goal for students to achieve -->
+*After this workshop, developers will be able to:*
+
+- In Express, implement a `User` model that securely stores passwords with `bcrypt`.
+- Compare and contrast Session and Web Token authentication strategies. 
+- Use the Satellizer module to implement Web Token authentication in Angular.
+
+### Where should we be now?
+<!-- call out the skills that are prerequisites -->
+*Before this workshop, developers should already be able to:*
+
+- Create an Angular service.
+- Make HTTP requests in an Angular app with `$http`.
+- Explain a session-based strategy for authentication.
+- Differentiate authentication and authorization.
+
+
 
 ## Background
 
-With Express and Rails you learned the Cookie-Session authentication strategy. However, there's a better way to communicate authentication in **Single Page Applications**. You're going to use an encoded and signed chunk of JSON called a **JSON Web Token**, or JWT (pronounced *"jot"*), to communicate authentication between client and server.
+With Rails you used a Session-based authentication strategy. However, there's a better way to communicate authentication in **Single Page Applications**. 
+
+You're going to use an encoded and signed chunk of JSON called a **JSON Web Token**, or JWT (pronounced *"jot"*), to communicate authentication between client and server.
 
 ![cookie-token-auth](https://cloud.githubusercontent.com/assets/7833470/12523189/095e1760-c10a-11e5-9c5a-09d4bf69f2c1.png)
 
@@ -81,13 +111,18 @@ eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzY290Y2guaW8iLCJleHAiOjEzMDA4MTk
 
 ## Angular Interceptors
 
-Angular interceptors allow you to "intercept" HTTP requests and responses and change them. You can use an interceptor to attach a JWT to every outgoing HTTP request, and handle 401 (Unauthorized) statuses in any HTTP response.
+Angular interceptors allow you to "intercept" HTTP requests and responses and change them. 
+
+They're a lot like "middleware" we saw in Express; `body-parser`, for example.
+
+You can use an interceptor to attach a JWT to every outgoing HTTP request, and handle 401 (Unauthorized) statuses in any HTTP response.
 
 ```js
 /*
  * app.js
  */
 
+// remember: a factory is another way to write a service
 app.factory('authInterceptor', ['$rootScope', '$q', '$window', function ($rootScope, $q, $window) {
   return {
     request: function (config) {
@@ -140,7 +175,7 @@ app.config(['$httpProvider', function ($httpProvider) {
 
 ## Challenges
 
-Work on the <a href="https://github.com/sf-wdi-24/angular_auth" target="_blank">Angular Auth Challenges</a>.
+Work on the <a href="https://github.com/sf-wdi-34/angular_auth" target="_blank">Angular Auth Challenges</a>.
 
 ## Resources
 
